@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- =====================================================================
+       SEO
+       ⚠ À FAIRE AVANT LA MISE EN LIGNE : remplace « https://www.example.com »
+       par ton vrai nom de domaine dans : canonical, og:url, og:image,
+       twitter:image, JSON-LD (ci-dessous), robots.txt et sitemap.xml.
+       ===================================================================== -->
+  <title>Mon Site — Création de site vitrine sur mesure · Dès 700 €</title>
+  <meta name="description" content="Mon Site crée votre site vitrine simple, rapide et sur mesure. Deux formules claires : 700 € ou 1 000 €, en ligne en 2 semaines max. Demandez votre site !">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Mon Site">
+  <link rel="canonical" href="https://www.example.com/">
+
+  <!-- Apparence du navigateur (barre d'adresse mobile, widgets de formulaire sombres) -->
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <meta name="application-name" content="Mon Site">
+  <meta name="apple-mobile-web-app-title" content="Mon Site">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Partage sur les réseaux (Open Graph / X-Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Mon Site">
+  <meta property="og:title" content="Mon Site — Création de site vitrine sur mesure">
+  <meta property="og:description" content="Site vitrine simple, rapide et sur mesure. Type A à 700 € ou Type B à 1 000 €. En ligne en 2 semaines max.">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:image" content="https://www.example.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mon Site : je crée votre site vitrine. Site Type A à 700 €, Site Type B à 1 000 €.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mon Site — Création de site vitrine sur mesure">
+  <meta name="twitter:description" content="Site vitrine simple, rapide et sur mesure. En ligne en 2 semaines max.">
+  <meta name="twitter:image" content="https://www.example.com/assets/og-image.png">
+
+  <!-- Icônes : ICO (anciens navigateurs) → SVG (moderne, net à toutes les tailles) → iOS → manifest -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Performance : police auto-hébergée (aucune requête vers Google), préchargée -->
+  <link rel="preload" href="assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=1.0.0">
+  <script src="script.js?v=1.0.0" defer></script>
+
+  <!-- Données structurées (Google) : l'entreprise et ses deux offres -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.example.com/#website",
+        "url": "https://www.example.com/",
+        "name": "Mon Site",
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.example.com/#service",
+        "name": "Mon Site",
+        "url": "https://www.example.com/",
+        "image": "https://www.example.com/assets/og-image.png",
+        "description": "Création de sites web vitrine simples, rapides et sur mesure.",
+        "priceRange": "700 € – 1 000 €",
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Site Type A",
+            "price": "700",
+            "priceCurrency": "EUR",
+            "description": "Site vitrine simple, propre et rapide. Formulaire de contact inclus. En ligne en 2 semaines max (si textes et photos fournis)."
+          },
+          {
+            "@type": "Offer",
+            "name": "Site Type B",
+            "price": "1000",
+            "priceCurrency": "EUR",
+            "description": "Site vitrine sur mesure, design précis selon vos choix. Formulaire de contact inclus. En ligne en 2 semaines max (si textes et photos fournis)."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Sprite d'icônes SVG (inline : aucune requête réseau, couleur pilotée par le CSS) -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="g-logo" x1="6" y1="2" x2="58" y2="62" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#d4c2ff"/>
+        <stop offset="1" stop-color="#9eeed3"/>
+      </linearGradient>
+    </defs>
+    <symbol id="i-logo" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="19" fill="url(#g-logo)"/>
+      <path d="M17 45V21.5L32 37l15-15.5V45" fill="none" stroke="#0a0a0f" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4.5v15M6 13.5l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19.5v-15M6 10.5l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9.5l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 1.5c.7 5.9 4.6 9.8 10.5 10.5-5.9.7-9.8 4.6-10.5 10.5-.7-5.9-4.6-9.8-10.5-10.5C7.4 11.3 11.3 7.4 12 1.5z" fill="currentColor"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- Barre de progression de lecture + rideau d'intro « swipe down » (100 % CSS) -->
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="curtain" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <!-- =====================================================================
+       EN-TÊTE
+       ===================================================================== -->
+  <header class="header" id="top">
+    <div class="header__bar wrap">
+      <a class="brand" href="#accueil" aria-label="Mon Site — Retour à l'accueil">
+        <svg class="brand__icon" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="brand__name">Mon Site<i class="brand__dot" aria-hidden="true"></i></span>
+      </a>
+
+      <nav class="nav" id="menu" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="#tarifs"><span class="nav__num" aria-hidden="true">01</span>Tarifs</a></li>
+          <li><a href="#realisations"><span class="nav__num" aria-hidden="true">02</span>Réalisations</a></li>
+          <li><a href="#contact"><span class="nav__num" aria-hidden="true">03</span>Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="#contact">Demander un site</a>
+      </nav>
+
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- =====================================================================
+         1. HERO
+         ===================================================================== -->
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hero__grid"></span>
+        <span class="blob blob--lilac"></span>
+        <span class="blob blob--mint"></span>
+        <span class="blob blob--peach"></span>
+        <span class="glow"></span>
+      </div>
+
+      <div class="wrap hero__inner">
+        <p class="eyebrow hero__eyebrow">Créateur de sites web</p>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span class="line__in">Je crée</span></span>
+          <span class="line"><span class="line__in"><span class="grad">votre site</span></span></span>
+          <span class="line"><span class="line__in">vitrine<span class="hero__period">.</span></span></span>
+        </h1>
+
+        <div class="hero__foot">
+          <p class="hero__lead">Un site clair, rapide et sur mesure pour présenter votre activité. En ligne en <strong>2&nbsp;semaines max</strong> (si textes et photos fournis).</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="#contact">Demander mon site <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost btn--lg" href="#tarifs">Voir les tarifs</a>
+          </div>
+        </div>
+
+        <ul class="hero__chips" aria-label="Points clés">
+          <li>Dès 700&nbsp;€</li>
+          <li>Formulaire de contact inclus</li>
+          <li>Adapté mobile</li>
+          <li>Rapide</li>
+        </ul>
+
+        <!-- Décor (autocollants flottants) -->
+        <div class="stickers" aria-hidden="true">
+          <div class="sticker sticker--browser">
+            <div class="sb">
+              <div class="sb__bar"><i></i><i></i><i></i></div>
+              <div class="sb__body">
+                <div class="sb__hero"><b></b><b></b><em></em></div>
+                <div class="sb__row"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="sticker sticker--price"><div class="price-badge"><small>Dès</small><strong>700&nbsp;€</strong></div></div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#tarifs" aria-label="Défiler vers les tarifs">
+        <span>Défiler</span><svg aria-hidden="true"><use href="#i-down"/></svg>
+      </a>
+    </section>
+
+    <!-- Bandeau défilant (décoratif) -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span class="marquee__item">Site vitrine</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">Sur mesure</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">Rapide</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">Adapté mobile</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">Formulaire de contact</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">En ligne en 2&nbsp;semaines</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+        </div>
+        <div class="marquee__group">
+          <span class="marquee__item">Site vitrine</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">Sur mesure</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">Rapide</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">Adapté mobile</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">Formulaire de contact</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+          <span class="marquee__item">En ligne en 2&nbsp;semaines</span><svg class="marquee__star"><use href="#i-spark"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         2. TARIFS & OFFRES
+         ===================================================================== -->
+    <section class="section pricing" id="tarifs" aria-labelledby="tarifs-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--mint reveal">Tarifs &amp; offres</p>
+          <h2 class="section__title" id="tarifs-title" data-split>Deux formules, zéro surprise.</h2>
+          <p class="section__lead reveal">Des prix clairs, annoncés d'avance. Choisissez la formule qui vous ressemble.</p>
+        </header>
+
+        <div class="plans" data-stagger>
+
+          <!-- Carte 1 : Site Type A -->
+          <article class="plan plan--a reveal reveal--card" aria-labelledby="plan-a-name">
+            <header class="plan__head">
+              <h3 class="plan__name" id="plan-a-name">Site Type A</h3>
+              <span class="plan__badge">Simple &amp; rapide</span>
+            </header>
+            <p class="plan__price"><span class="visually-hidden">700 euros</span><span class="plan__amount" aria-hidden="true">700</span><span class="plan__cur" aria-hidden="true">€</span></p>
+            <ul class="plan__list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Site vitrine <strong>simple, propre et rapide</strong>.</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Formulaire de contact inclus.</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>En ligne en <strong>2&nbsp;semaines max</strong> (si textes et photos fournis).</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Nom de domaine et abonnement hébergement payés directement par le client (conseil&nbsp;: OVH).</span></li>
+              <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Option assistance&nbsp;: <strong>+30&nbsp;€</strong> si je prends en charge l'aide au paramétrage de l'hébergement.</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Mises à jour / interventions ultérieures <strong>sur devis</strong> par intervention.</span></li>
+            </ul>
+            <a class="btn btn--plan" href="#contact" data-choose="type-a">Choisir le Type A <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <!-- Carte 2 : Site Type B -->
+          <article class="plan plan--b reveal reveal--card" aria-labelledby="plan-b-name">
+            <header class="plan__head">
+              <h3 class="plan__name" id="plan-b-name">Site Type B</h3>
+              <span class="plan__badge">Sur mesure</span>
+            </header>
+            <p class="plan__price"><span class="visually-hidden">1 000 euros</span><span class="plan__amount" aria-hidden="true">1&nbsp;000</span><span class="plan__cur" aria-hidden="true">€</span></p>
+            <ul class="plan__list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Style <strong>sur mesure</strong> et précision du design selon les choix du client.</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Formulaire de contact inclus.</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>En ligne en <strong>2&nbsp;semaines max</strong> (si textes et photos fournis).</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Nom de domaine et abonnement hébergement payés directement par le client (conseil&nbsp;: OVH).</span></li>
+              <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Option assistance&nbsp;: <strong>+30&nbsp;€</strong> si je prends en charge l'aide au paramétrage de l'hébergement.</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Mises à jour / interventions ultérieures <strong>sur devis</strong> par intervention.</span></li>
+            </ul>
+            <a class="btn btn--plan" href="#contact" data-choose="type-b">Choisir le Type B <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+
+        <p class="plans__more reveal">Un besoin particulier, une question&nbsp;? <a class="link" href="#contact" data-choose="autre">Écrivez-moi</a></p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. EXEMPLES & PORTFOLIO
+         Chaque maquette est un mini-site en HTML/CSS (léger, net sur tous les écrans).
+         Pour mettre une vraie capture d'écran : remplace le bloc .mock__page par
+         <img src="assets/mon-projet.webp" alt="" loading="lazy" width="800" height="1400">
+         ===================================================================== -->
+    <section class="section works" id="realisations" aria-labelledby="works-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--sky reveal">Exemples &amp; portfolio</p>
+          <h2 class="section__title" id="works-title" data-split>Quelques idées de rendu.</h2>
+          <p class="section__lead reveal">Des maquettes de démonstration pour vous projeter. Votre site sera adapté à votre activité, à vos couleurs et à votre style.</p>
+        </header>
+
+        <div class="works__grid" data-stagger>
+
+          <!-- Maquette 1 : boulangerie -->
+          <article class="work reveal reveal--card" aria-labelledby="w1">
+            <div class="work__inner">
+              <div class="mock mock--bakery" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i><span>atelier-brioche.fr</span></div>
+                <div class="mock__view"><div class="mock__page">
+                  <div class="mp-nav"><b class="mp-logo">Brioche</b><span>Pains</span><span>Gâteaux</span><em class="mp-pill">Horaires</em></div>
+                  <div class="mp-hero mp-hero--split">
+                    <div><strong class="mp-title">Le bon pain, chaque matin.</strong><p class="mp-text">Fait maison, cuit sur place, à deux pas de chez vous.</p><em class="mp-pill">Voir la carte</em></div>
+                    <div class="mp-shot"></div>
+                  </div>
+                  <div class="mp-cards">
+                    <div class="mp-card"><i></i><b>Pains</b><span></span><span></span></div>
+                    <div class="mp-card"><i></i><b>Viennoiseries</b><span></span><span></span></div>
+                    <div class="mp-card"><i></i><b>Gâteaux</b><span></span><span></span></div>
+                  </div>
+                  <div class="mp-band"><b>Ouvert 7h – 19h</b><span>Mardi au dimanche</span></div>
+                  <div class="mp-foot"><span></span><span></span><span></span></div>
+                </div></div>
+              </div>
+              <div class="work__meta">
+                <div><h3 class="work__title" id="w1">Atelier Brioche</h3><p class="work__desc">Boulangerie artisanale</p></div>
+                <span class="chip chip--a">Type A</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Maquette 2 : photographe -->
+          <article class="work reveal reveal--card" aria-labelledby="w2">
+            <div class="work__inner">
+              <div class="mock mock--photo" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i><span>studio-lumen.fr</span></div>
+                <div class="mock__view"><div class="mock__page">
+                  <div class="mp-nav"><b class="mp-logo">Studio Lumen</b><span>Portfolio</span><span>Tarifs</span><em class="mp-pill">Contact</em></div>
+                  <div class="mp-hero mp-hero--center">
+                    <strong class="mp-title">Chaque instant mérite sa lumière.</strong>
+                    <p class="mp-text">Mariages, portraits et reportages.</p>
+                  </div>
+                  <div class="mp-gallery"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="mp-band"><b>Réservez votre séance</b><em class="mp-pill">Écrire</em></div>
+                  <div class="mp-foot"><span></span><span></span><span></span></div>
+                </div></div>
+              </div>
+              <div class="work__meta">
+                <div><h3 class="work__title" id="w2">Studio Lumen</h3><p class="work__desc">Photographe</p></div>
+                <span class="chip chip--b">Type B</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Maquette 3 : coach sportif -->
+          <article class="work reveal reveal--card" aria-labelledby="w3">
+            <div class="work__inner">
+              <div class="mock mock--coach" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i><span>coach-alex.fr</span></div>
+                <div class="mock__view"><div class="mock__page">
+                  <div class="mp-nav"><b class="mp-logo">Coach Alex</b><span>Programmes</span><span>Avis</span><em class="mp-pill">Essai</em></div>
+                  <div class="mp-hero mp-hero--center">
+                    <strong class="mp-title">Bougez mieux, vivez mieux.</strong>
+                    <p class="mp-text">Coaching sportif personnalisé, en salle ou en extérieur.</p>
+                    <div class="mp-btns"><em class="mp-pill">Réserver</em><em class="mp-pill mp-pill--ghost">Programmes</em></div>
+                  </div>
+                  <div class="mp-stats"><div><b>1:1</b><span>Suivi</span></div><div><b>3×</b><span>Par semaine</span></div><div><b>+</b><span>Motivation</span></div></div>
+                  <div class="mp-cards">
+                    <div class="mp-card"><i></i><b>Cardio</b><span></span><span></span></div>
+                    <div class="mp-card"><i></i><b>Force</b><span></span><span></span></div>
+                    <div class="mp-card"><i></i><b>Souplesse</b><span></span><span></span></div>
+                  </div>
+                  <div class="mp-foot"><span></span><span></span><span></span></div>
+                </div></div>
+              </div>
+              <div class="work__meta">
+                <div><h3 class="work__title" id="w3">Coach Alex</h3><p class="work__desc">Coaching sportif</p></div>
+                <span class="chip chip--a">Type A</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Maquette 4 : cabinet de conseil -->
+          <article class="work reveal reveal--card" aria-labelledby="w4">
+            <div class="work__inner">
+              <div class="mock mock--cabinet" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i><span>cabinet-verdier.fr</span></div>
+                <div class="mock__view"><div class="mock__page">
+                  <div class="mp-nav"><b class="mp-logo">Verdier</b><span>Expertises</span><span>Équipe</span><em class="mp-pill">RDV</em></div>
+                  <div class="mp-hero mp-hero--split">
+                    <div><strong class="mp-title">Conseil et accompagnement.</strong><ul class="mp-ticks"><li>Écoute</li><li>Clarté</li><li>Réactivité</li></ul></div>
+                    <div class="mp-form"><b>Prendre rendez-vous</b><span></span><span></span><em class="mp-pill">Envoyer</em></div>
+                  </div>
+                  <div class="mp-cards">
+                    <div class="mp-card"><i></i><b>Audit</b><span></span><span></span></div>
+                    <div class="mp-card"><i></i><b>Stratégie</b><span></span><span></span></div>
+                    <div class="mp-card"><i></i><b>Suivi</b><span></span><span></span></div>
+                  </div>
+                  <div class="mp-band"><b>Premier échange</b><span>Sur rendez-vous</span></div>
+                  <div class="mp-foot"><span></span><span></span><span></span></div>
+                </div></div>
+              </div>
+              <div class="work__meta">
+                <div><h3 class="work__title" id="w4">Cabinet Verdier</h3><p class="work__desc">Conseil et accompagnement</p></div>
+                <span class="chip chip--b">Type B</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Maquette 5 : restaurant -->
+          <article class="work reveal reveal--card" aria-labelledby="w5">
+            <div class="work__inner">
+              <div class="mock mock--resto" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i><span>la-table-d-oli.fr</span></div>
+                <div class="mock__view"><div class="mock__page">
+                  <div class="mp-nav"><b class="mp-logo">La Table d'Oli</b><span>Carte</span><span>Infos</span><em class="mp-pill">Réserver</em></div>
+                  <div class="mp-hero mp-hero--split">
+                    <div><strong class="mp-title">Cuisine du marché.</strong><p class="mp-text">Produits frais, recettes de saison.</p></div>
+                    <div class="mp-shot"></div>
+                  </div>
+                  <div class="mp-menu">
+                    <div><span>Velouté de saison</span><i></i><b>9</b></div>
+                    <div><span>Poisson du jour</span><i></i><b>21</b></div>
+                    <div><span>Tarte maison</span><i></i><b>8</b></div>
+                  </div>
+                  <div class="mp-band"><b>Midi et soir</b><span>Du mardi au samedi</span></div>
+                  <div class="mp-foot"><span></span><span></span><span></span></div>
+                </div></div>
+              </div>
+              <div class="work__meta">
+                <div><h3 class="work__title" id="w5">La Table d'Oli</h3><p class="work__desc">Restaurant</p></div>
+                <span class="chip chip--a">Type A</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Maquette 6 : artisan -->
+          <article class="work reveal reveal--card" aria-labelledby="w6">
+            <div class="work__inner">
+              <div class="mock mock--artisan" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i><span>dupont-plomberie.fr</span></div>
+                <div class="mock__view"><div class="mock__page">
+                  <div class="mp-nav"><b class="mp-logo">Dupont</b><span>Services</span><span>Zone</span><em class="mp-pill">Appeler</em></div>
+                  <div class="mp-hero mp-hero--split">
+                    <div><strong class="mp-title">Dépannage rapide, devis clair.</strong><p class="mp-text">Plomberie et chauffage, intervention soignée.</p><em class="mp-pill">Demander un devis</em></div>
+                    <div class="mp-shot"></div>
+                  </div>
+                  <div class="mp-services">
+                    <div><i></i><b>Fuites</b></div><div><i></i><b>Chauffe-eau</b></div>
+                    <div><i></i><b>Salle de bain</b></div><div><i></i><b>Entretien</b></div>
+                  </div>
+                  <div class="mp-band"><b>Zone d'intervention</b><span>Ville et alentours</span></div>
+                  <div class="mp-foot"><span></span><span></span><span></span></div>
+                </div></div>
+              </div>
+              <div class="work__meta">
+                <div><h3 class="work__title" id="w6">Dupont Plomberie</h3><p class="work__desc">Artisan, dépannage</p></div>
+                <span class="chip chip--a">Type A</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="works__note reveal">Maquettes de démonstration (projets fictifs), à titre d'illustration.</p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. CONTACT
+         Envoi : voir CONFIG en haut de script.js (formulaire.php par défaut,
+         ou Web3Forms / Formspree). Protections : honeypot + jeton signé côté PHP.
+         ===================================================================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact__grid">
+
+        <div class="contact__intro">
+          <p class="eyebrow eyebrow--peach reveal">Contact</p>
+          <h2 class="section__title" id="contact-title" data-split>Parlons de votre projet.</h2>
+          <p class="section__lead reveal">Choisissez votre formule, expliquez-moi votre idée&nbsp;: je vous réponds par e-mail.</p>
+          <ul class="contact__points reveal">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>En ligne en 2&nbsp;semaines max (si textes et photos fournis)</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Formulaire de contact inclus dans les deux formules</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Nom de domaine et hébergement à votre nom (conseil&nbsp;: OVH)</li>
+          </ul>
+        </div>
+
+        <div class="form-card reveal reveal--card">
+          <form class="form" id="contact-form" method="post" action="formulaire.php" novalidate>
+
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="f-name">Nom</label>
+                <input class="input" id="f-name" name="name" type="text" autocomplete="name" autocapitalize="words" required minlength="2" maxlength="80" placeholder="Votre nom" aria-describedby="e-name">
+                <p class="field__error" id="e-name" hidden></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-email">Email</label>
+                <input class="input" id="f-email" name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" required maxlength="254" placeholder="vous@exemple.fr" aria-describedby="e-email">
+                <p class="field__error" id="e-email" hidden></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-plan">Choix de la formule</label>
+              <div class="select">
+                <select class="input" id="f-plan" name="plan" required aria-describedby="e-plan">
+                  <option value="" disabled selected hidden>Choisir une formule…</option>
+                  <option value="type-a">Site Type A — 700 €</option>
+                  <option value="type-b">Site Type B — 1 000 €</option>
+                  <option value="autre">Autre / Question</option>
+                </select>
+                <svg class="select__ico" aria-hidden="true"><use href="#i-chevron"/></svg>
+              </div>
+              <p class="field__error" id="e-plan" hidden></p>
+            </div>
+
+            <label class="check">
+              <input type="checkbox" id="f-hosting" name="hosting" value="1">
+              <span class="check__text"><span class="check__price">+30&nbsp;€</span> Aide à la configuration hébergement</span>
+            </label>
+
+            <div class="field">
+              <label class="field__label" for="f-message">Message</label>
+              <textarea class="input" id="f-message" name="message" rows="6" required minlength="10" maxlength="2000" placeholder="Parlez-moi de votre activité et de vos attentes…" aria-describedby="e-message"></textarea>
+              <p class="field__error" id="e-message" hidden></p>
+            </div>
+
+            <!-- Piège à robots (honeypot) : invisible pour un humain, rempli par les robots -->
+            <div class="hp" aria-hidden="true">
+              <label>Ne pas remplir ce champ <input type="text" name="website" tabindex="-1" autocomplete="off" data-1p-ignore data-lpignore="true"></label>
+            </div>
+
+            <p class="estimate" id="estimate" hidden>
+              <span>Estimation indicative</span>
+              <strong id="estimate-value">700&nbsp;€</strong>
+              <small>hors nom de domaine et hébergement</small>
+            </p>
+
+            <button class="btn btn--primary btn--lg btn--block" type="submit">
+              <span class="btn__label">Envoyer ma demande</span>
+              <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+
+            <p class="form__legal" id="form-legal">En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour répondre à votre demande. <a class="link" href="politique-confidentialite.html">Politique de confidentialité</a>.</p>
+            <noscript><p class="form__noscript">JavaScript est nécessaire pour envoyer ce formulaire (protection anti-spam). Merci de l'activer.</p></noscript>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <!-- Message de succès (affiché à la place du formulaire) -->
+          <div class="form-success" id="form-success" role="status" tabindex="-1" hidden>
+            <svg class="tick" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l7.5 7.5L37 19"/></svg>
+            <h3 class="form-success__title">Message envoyé&nbsp;!</h3>
+            <p>Merci pour votre demande, je vous réponds par e-mail dès que possible.</p>
+            <button class="btn btn--ghost" type="button" id="form-reset">Envoyer un autre message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       5. PIED DE PAGE & LÉGAL
+       ===================================================================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="#accueil" aria-label="Mon Site — Retour à l'accueil">
+            <svg class="brand__icon" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><use href="#i-logo"/></svg>
+            <span class="brand__name">Mon Site<i class="brand__dot" aria-hidden="true"></i></span>
+          </a>
+          <p>Création de sites web vitrine, simples, rapides et sur mesure.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Liens légaux">
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="cgu.html">CGU</a></li>
+            <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+          </ul>
+        </nav>
+        <a class="to-top" href="#top">Retour en haut <svg aria-hidden="true"><use href="#i-up"/></svg></a>
+      </div>
+      <p class="footer__word" aria-hidden="true">Mon Site.</p>
+      <p class="footer__copy">© <span data-year>2026</span> Mon Site — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

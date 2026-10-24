@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /formulaire.php
+
+# ⚠ Remplace example.com par ton nom de domaine
+Sitemap: https://www.example.com/sitemap.xml

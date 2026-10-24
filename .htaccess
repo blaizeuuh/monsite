@@ -1,0 +1,124 @@
+# ==========================================================================
+#  Mon Site — .htaccess  (Apache 2.4, mutualisé type OVH)
+#  Sécurité · performances · cache. Chaque bloc est protégé par <IfModule> :
+#  si un module n'existe pas sur ton hébergement, le bloc est simplement ignoré.
+# ==========================================================================
+
+# --- Pas de listing de dossiers, pas de devinette de fichiers ---
+Options -Indexes -MultiViews
+
+DirectoryIndex index.html index.php
+
+# --- Types MIME & encodage ---
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType font/woff2 .woff2
+  AddType image/svg+xml .svg
+  AddCharset UTF-8 .html .css .js .xml .txt .webmanifest
+</IfModule>
+
+
+# ==========================================================================
+#  1. REDIRECTION HTTPS
+#  À activer (retire les « # ») UNE FOIS le certificat SSL actif sur ton
+#  hébergement, sinon le site deviendrait inaccessible.
+# ==========================================================================
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} !=on
+#   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+
+# ==========================================================================
+#  2. EN-TÊTES DE SÉCURITÉ
+#  Content-Security-Policy : seul le site lui-même peut charger scripts, styles,
+#  polices, images et envoyer des données. Aucun JavaScript injecté ne peut
+#  s'exécuter (script-src 'self'), le site ne peut pas être mis en iframe
+#  (frame-ancestors 'none') ni détourner un formulaire (form-action 'self').
+#
+#  ⚠ Mode Web3Forms / Formspree (voir script.js → CONFIG.provider) : ajoute le
+#    domaine du service à connect-src, par ex.
+#      connect-src 'self' https://api.web3forms.com
+#      connect-src 'self' https://formspree.io
+# ==========================================================================
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  # HSTS : uniquement sur une connexion HTTPS (ignoré en HTTP). 1 an.
+  Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+  Header always unset X-Powered-By
+  Header unset X-Powered-By
+</IfModule>
+
+
+# ==========================================================================
+#  3. ACCÈS : méthodes, robots malveillants, fichiers sensibles
+# ==========================================================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Seules les méthodes GET, HEAD et POST sont utiles à ce site.
+  # (TRACE ne peut pas être coupé depuis un .htaccess : c'est le réglage serveur « TraceEnable Off »,
+  #  déjà actif chez la plupart des hébergeurs. Il n'y a de toute façon aucun cookie ici.)
+  RewriteCond %{REQUEST_METHOD} !^(GET|HEAD|POST)$ [NC]
+  RewriteRule ^ - [F,L]
+
+  # Scanners de vulnérabilités et outils d'attaque connus
+  RewriteCond %{HTTP_USER_AGENT} (sqlmap|nikto|acunetix|netsparker|havij|nessus|masscan|zgrab|wpscan|dirbuster|gobuster|wfuzz|nuclei|jaeles) [NC]
+  RewriteRule ^ - [F,L]
+</IfModule>
+
+<IfModule mod_authz_core.c>
+  # Fichiers cachés (.git, .env, .htpasswd…) sauf /.well-known/
+  <FilesMatch "^\.(?!well-known)">
+    Require all denied
+  </FilesMatch>
+
+  # Sauvegardes, journaux, configurations, sources : jamais servis
+  <FilesMatch "\.(bak|backup|dist|env|ini|inc|log|lock|sh|sql|swp|tmp|yml|yaml|md|json)$">
+    Require all denied
+  </FilesMatch>
+
+  # Seul formulaire.php est exécutable : tout autre .php est bloqué
+  # (protège contre un fichier déposé par erreur ou par un attaquant)
+  <FilesMatch "\.(php|phtml|php[0-9]|phar)$">
+    Require all denied
+  </FilesMatch>
+  <Files "formulaire.php">
+    Require all granted
+  </Files>
+</IfModule>
+
+
+# ==========================================================================
+#  4. PERFORMANCES : compression + cache
+#  HTML / CSS / JS : revalidés chaque heure (tes modifications apparaissent vite ;
+#  pense aussi à changer ?v=1.0.0 dans index.html pour forcer la mise à jour).
+#  Polices, icônes, images : mises en cache longtemps (renomme le fichier si tu le changes).
+# ==========================================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml application/javascript text/javascript application/json application/manifest+json application/ld+json image/svg+xml image/x-icon font/woff2
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|xml|txt|webmanifest)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpe?g|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  # Le formulaire ne doit jamais être mis en cache
+  <FilesMatch "^formulaire\.php$">
+    Header set Cache-Control "no-store, max-age=0"
+  </FilesMatch>
+</IfModule>
