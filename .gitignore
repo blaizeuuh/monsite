@@ -1,0 +1,22 @@
+# Secrets et configuration locale
+.env
+.env.*
+*.key
+*.pem
+secret.key
+config.local.php
+private/
+data/
+
+# Fichiers système / éditeur
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs et temporaires
+*.log
+*.tmp
+*.bak
+node_modules/
