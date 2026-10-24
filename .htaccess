@@ -1,5 +1,5 @@
 # ==========================================================================
-#  Mon Site — .htaccess  (Apache 2.4, mutualisé type OVH)
+#  Zeuhsty — .htaccess  (Apache 2.4, mutualisé type OVH)
 #  Sécurité · performances · cache. Chaque bloc est protégé par <IfModule> :
 #  si un module n'existe pas sur ton hébergement, le bloc est simplement ignoré.
 # ==========================================================================

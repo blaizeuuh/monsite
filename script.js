@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Mon Site — script.js
+   Zeuhsty — script.js
    --------------------------------------------------------------------------
    Aucune dépendance. Tout est protégé par un try/catch : si un module échoue,
    les autres continuent de fonctionner.
@@ -569,7 +569,7 @@
         const result = await postJSON(CONFIG.web3forms.endpoint, {
           access_key: CONFIG.web3forms.accessKey,
           subject: 'Nouveau message — ' + PLAN_LABELS[data.plan],
-          from_name: 'Mon Site (formulaire)',
+          from_name: 'Zeuhsty (formulaire)',
           name: data.name,
           email: data.email,
           formule: PLAN_LABELS[data.plan],
@@ -697,7 +697,7 @@
   /* ======================================================================
      DÉMARRAGE
      ====================================================================== */
-  const run = (fn) => { try { return fn(); } catch (error) { console.error('[Mon Site]', error); return null; } };
+  const run = (fn) => { try { return fn(); } catch (error) { console.error('[Zeuhsty]', error); return null; } };
 
   run(initReveal);
   run(initScrollEffects);
