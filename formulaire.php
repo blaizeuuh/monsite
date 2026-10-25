@@ -1,6 +1,6 @@
 <?php
 /**
- * formulaire.php — Réception sécurisée du formulaire de contact « Mon Site »
+ * formulaire.php — Réception sécurisée du formulaire de contact « Zeuhsty »
  * ============================================================================
  * Compatible PHP 7.4 → 8.x. Aucune dépendance. Envoi par la fonction mail().
  *
@@ -42,7 +42,7 @@ const CONTACT_TO = 'contact@example.com';
 // Le visiteur, lui, est en « Répondre à » : tu réponds directement depuis ta messagerie.
 const MAIL_FROM = 'no-reply@example.com';
 
-const SITE_NAME = 'Mon Site';
+const SITE_NAME = 'Zeuhsty';
 
 // Secret de signature des jetons (32 caractères minimum). Laisse vide : il est alors
 // généré automatiquement et stocké hors du dossier public.
