@@ -42,7 +42,7 @@
     tokenMaxAgeMs: 90 * 60 * 1000, // un jeton est redemandé après 90 min (le serveur l'accepte 2 h)
 
     // Tarifs utilisés pour l'estimation affichée sous le formulaire (purement indicatif)
-    prices: { 'type-a': 700, 'type-b': 1000, hosting: 30 },
+    prices: { 'type-a': 700, 'type-b': 1000, etudiant: 250, hosting: 30 },
   };
 
 
@@ -542,7 +542,7 @@
       }
     }
 
-    const PLAN_LABELS = { 'type-a': 'Site Type A — 700 €', 'type-b': 'Site Type B — 1 000 €', autre: 'Autre / Question' };
+    const PLAN_LABELS = { 'type-a': 'Site Type A — 700 €', 'type-b': 'Site Type B — 1 000 €', etudiant: 'Offre Étudiant — 250 €', 'carte-blanche': 'Carte blanche — sur devis', autre: 'Autre / Question' };
 
     const senders = {
       // Notre serveur : formulaire.php (jeton signé + toutes les protections)

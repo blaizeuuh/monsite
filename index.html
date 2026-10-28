@@ -70,7 +70,7 @@
         "url": "https://www.example.com/",
         "image": "https://www.example.com/assets/og-image.png",
         "description": "Création de sites web vitrine simples, rapides et sur mesure.",
-        "priceRange": "700 € – 1 000 €",
+        "priceRange": "250 € – 1 000 €",
         "makesOffer": [
           {
             "@type": "Offer",
@@ -85,6 +85,19 @@
             "price": "1000",
             "priceCurrency": "EUR",
             "description": "Site vitrine sur mesure, design précis selon vos choix. Formulaire de contact inclus. En ligne en 2 semaines max (si textes et photos fournis)."
+          },
+          {
+            "@type": "Offer",
+            "name": "Offre Étudiant",
+            "price": "250",
+            "priceCurrency": "EUR",
+            "description": "Portfolio sur mesure (présentations) avec formulaire de contact, réservé aux étudiants."
+          },
+          {
+            "@type": "Offer",
+            "name": "Carte blanche",
+            "priceCurrency": "EUR",
+            "description": "Création libre à partir de peu d'informations, sans direction artistique précise. Prix fixé sur devis, aucune modification après validation du devis."
           }
         ]
       }
@@ -233,7 +246,7 @@
       <div class="wrap">
         <header class="section__head">
           <p class="eyebrow eyebrow--mint reveal">Tarifs &amp; offres</p>
-          <h2 class="section__title" id="tarifs-title" data-split>Deux formules, zéro surprise.</h2>
+          <h2 class="section__title" id="tarifs-title" data-split>Quatre formules, zéro surprise.</h2>
           <p class="section__lead reveal">Des prix clairs, annoncés d'avance. Choisissez la formule qui vous ressemble.</p>
         </header>
 
@@ -247,14 +260,14 @@
             </header>
             <p class="plan__price"><span class="visually-hidden">700 euros</span><span class="plan__amount" aria-hidden="true">700</span><span class="plan__cur" aria-hidden="true">€</span></p>
             <ul class="plan__list">
-              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Site vitrine <strong>simple, propre et rapide</strong>.</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Formulaire de contact inclus.</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>En ligne en <strong>2&nbsp;semaines max</strong> (si textes et photos fournis).</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Nom de domaine et abonnement hébergement payés directement par le client (conseil&nbsp;: OVH).</span></li>
               <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Option assistance&nbsp;: <strong>+30&nbsp;€</strong> si je prends en charge l'aide au paramétrage de l'hébergement.</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Mises à jour / interventions ultérieures <strong>sur devis</strong> par intervention.</span></li>
-            </ul>
-            <a class="btn btn--plan" href="#contact" data-choose="type-a">Choisir le Type A <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                            <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Site vitrine <strong>simple, propre et rapide</strong>.</span></li>
+                          </ul>
+                          <a class="btn btn--plan" href="#contact" data-choose="type-a">Choisir le Type A <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </article>
 
           <!-- Carte 2 : Site Type B -->
@@ -265,15 +278,53 @@
             </header>
             <p class="plan__price"><span class="visually-hidden">1 000 euros</span><span class="plan__amount" aria-hidden="true">1&nbsp;000</span><span class="plan__cur" aria-hidden="true">€</span></p>
             <ul class="plan__list">
-              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Style <strong>sur mesure</strong> et précision du design selon les choix du client.</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Formulaire de contact inclus.</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>En ligne en <strong>2&nbsp;semaines max</strong> (si textes et photos fournis).</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Nom de domaine et abonnement hébergement payés directement par le client (conseil&nbsp;: OVH).</span></li>
               <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Option assistance&nbsp;: <strong>+30&nbsp;€</strong> si je prends en charge l'aide au paramétrage de l'hébergement.</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Mises à jour / interventions ultérieures <strong>sur devis</strong> par intervention.</span></li>
-            </ul>
-            <a class="btn btn--plan" href="#contact" data-choose="type-b">Choisir le Type B <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </article>
+                            <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Style <strong>sur mesure</strong> et précision du design selon les choix du client.</span></li>
+                          </ul>
+                          <a class="btn btn--plan" href="#contact" data-choose="type-b">Choisir le Type B <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                        </article>
+
+                        <!-- Carte 3 : Offre étudiant -->
+                        <article class="plan plan--c reveal reveal--card" aria-labelledby="plan-c-name">
+                          <header class="plan__head">
+                            <h3 class="plan__name" id="plan-c-name">Offre Étudiant</h3>
+                            <span class="plan__badge">Portfolio</span>
+                          </header>
+                          <p class="plan__price"><span class="visually-hidden">250 euros</span><span class="plan__amount" aria-hidden="true">250</span><span class="plan__cur" aria-hidden="true">€</span></p>
+                          <ul class="plan__list">
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Portfolio <strong>sur mesure</strong> pour présenter vos projets et réalisations.</span></li>
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Formulaire de contact inclus.</span></li>
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Réservé aux <strong>étudiants</strong> (justificatif demandé).</span></li>
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Nom de domaine et abonnement hébergement payés directement par le client (conseil&nbsp;: OVH).</span></li>
+                            <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Option assistance&nbsp;: <strong>+30&nbsp;€</strong> si je prends en charge l'aide au paramétrage de l'hébergement.</span></li>
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Mises à jour / interventions ultérieures <strong>sur devis</strong> par intervention.</span></li>
+                            <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Un portfolio <strong>pensé pour vous</strong>, de la présentation au contact.</span></li>
+                          </ul>
+                          <a class="btn btn--plan" href="#contact" data-choose="etudiant">Choisir l'offre Étudiant <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                        </article>
+
+                        <!-- Carte 4 : Carte blanche (sur devis) -->
+                        <article class="plan plan--d reveal reveal--card" aria-labelledby="plan-d-name">
+                          <header class="plan__head">
+                            <h3 class="plan__name" id="plan-d-name">Carte blanche</h3>
+                            <span class="plan__badge">Sur devis</span>
+                          </header>
+                          <p class="plan__price plan__price--text"><span class="plan__amount" aria-hidden="true">Sur devis</span></p>
+                          <ul class="plan__list">
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Pas d'inspiration, pas de direction artistique précise&nbsp;? <strong>Je crée librement</strong> à partir du peu d'infos que vous me donnez.</span></li>
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Formulaire de contact inclus.</span></li>
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Prix <strong>fixé avec le devis</strong>, selon l'ampleur du projet.</span></li>
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Nom de domaine et abonnement hébergement payés directement par le client (conseil&nbsp;: OVH).</span></li>
+                            <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Option assistance&nbsp;: <strong>+30&nbsp;€</strong> si je prends en charge l'aide au paramétrage de l'hébergement.</span></li>
+                            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Mises à jour / interventions ultérieures <strong>sur devis</strong> par intervention.</span></li>
+                            <li class="is-option"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Une fois le devis validé, <strong>plus aucune modification</strong> du design n'est possible.</span></li>
+                          </ul>
+                          <a class="btn btn--plan" href="#contact" data-choose="carte-blanche">Demander un devis <svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                        </article>
         </div>
 
         <p class="plans__more reveal">Un besoin particulier, une question&nbsp;? <a class="link" href="#contact" data-choose="autre">Écrivez-moi</a></p>
@@ -501,6 +552,8 @@
                   <option value="" disabled selected hidden>Choisir une formule…</option>
                   <option value="type-a">Site Type A — 700 €</option>
                   <option value="type-b">Site Type B — 1 000 €</option>
+                  <option value="etudiant">Offre Étudiant — 250 €</option>
+                  <option value="carte-blanche">Carte blanche — sur devis</option>
                   <option value="autre">Autre / Question</option>
                 </select>
                 <svg class="select__ico" aria-hidden="true"><use href="#i-chevron"/></svg>

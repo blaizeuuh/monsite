@@ -374,6 +374,8 @@ function read_json(): array
 const PLANS = [
     'type-a' => ['label' => 'Site Type A — 700 €',   'ascii' => 'Site Type A (700 EUR)'],
     'type-b' => ['label' => 'Site Type B — 1 000 €', 'ascii' => 'Site Type B (1000 EUR)'],
+    'etudiant'      => ['label' => 'Offre Étudiant — 250 €',     'ascii' => 'Offre Etudiant (250 EUR)'],
+    'carte-blanche' => ['label' => 'Carte blanche — sur devis',  'ascii' => 'Carte blanche (sur devis)'],
     'autre'  => ['label' => 'Autre / Question',      'ascii' => 'Autre / Question'],
 ];
 
